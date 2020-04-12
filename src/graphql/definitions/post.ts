@@ -19,12 +19,10 @@ export const typeDefs = gql`
   }
 `
 
-export const resolvers = {
+export const resolvers: Resolvers = {
   Query: {
     post: async (_, { id }, { knex }) => {
-      return knex('Post')
-        .where({ id })
-        .first()
+      return knex('Post').where({ id }).first()
     },
     posts: async (_, __, { knex }) => {
       return knex('Post')
@@ -35,4 +33,4 @@ export const resolvers = {
       return knex('Post').where({ idUser: id })
     },
   },
-} as Resolvers
+}

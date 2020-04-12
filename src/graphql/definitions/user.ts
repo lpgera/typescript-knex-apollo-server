@@ -6,6 +6,7 @@ export const typeDefs = gql`
     id: Int!
     firstName: String!
     lastName: String!
+
     fullName: String!
   }
 
@@ -23,12 +24,10 @@ export const typeDefs = gql`
   }
 `
 
-export const resolvers = {
+export const resolvers: Resolvers = {
   Query: {
     user: async (_, { id }, { knex }) => {
-      return knex('User')
-        .where({ id })
-        .first()
+      return knex('User').where({ id }).first()
     },
     users: async (_, __, { knex }) => {
       return knex('User')
@@ -41,16 +40,12 @@ export const resolvers = {
   },
   Post: {
     user: async ({ idUser }, _, { knex }) => {
-      return knex('User')
-        .where({ id: idUser })
-        .first()
+      return knex('User').where({ id: idUser }).first()
     },
   },
   Comment: {
     user: async ({ idUser }, _, { knex }) => {
-      return knex('User')
-        .where({ id: idUser })
-        .first()
+      return knex('User').where({ id: idUser }).first()
     },
   },
-} as Resolvers
+}
