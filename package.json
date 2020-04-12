@@ -1,0 +1,41 @@
+{
+  "name": "typescript-knex-apollo-server",
+  "version": "1.0.0",
+  "description": "An example GraphQL server built with TypeScript, Knex.js and Apollo Server",
+  "main": "index.js",
+  "scripts": {
+    "db-up": "docker-compose up -d mariadb",
+    "db-down": "docker-compose down --remove-orphans",
+    "watch": "nodemon",
+    "generate": "graphql-codegen -r dotenv/config",
+    "start": "ts-node index.ts"
+  },
+  "author": "lpgera",
+  "repository": "lpgera/typescript-knex-apollo-server",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@types/faker": "^4.1.11",
+    "apollo-server": "^2.12.0",
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0",
+    "graphql": "^15.0.0",
+    "knex": "^0.20.13",
+    "mysql": "^2.18.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.13.2",
+    "@graphql-codegen/typescript": "^1.13.2",
+    "@graphql-codegen/typescript-resolvers": "^1.13.2",
+    "husky": "^3.1.0",
+    "nodemon": "^2.0.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.11.1"
+  }
+}

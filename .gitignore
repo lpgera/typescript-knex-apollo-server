@@ -1,0 +1,4 @@
+node_modules
+.mysql-data
+.idea
+.env

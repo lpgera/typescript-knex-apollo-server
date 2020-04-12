@@ -1,0 +1,9 @@
+schema: http://localhost:${PORT}/graphql
+generates:
+  ./src/graphql/resolvers.gen.ts:
+    config:
+      useIndexSignature: true
+      contextType: ./context#Context
+    plugins:
+      - typescript
+      - typescript-resolvers
