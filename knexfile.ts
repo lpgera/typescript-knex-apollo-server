@@ -6,7 +6,6 @@ if (
   !process.env.DB_HOST ||
   !process.env.DB_PORT ||
   !process.env.DB_USER ||
-  !process.env.DB_PASSWORD ||
   !process.env.DB_NAME
 ) {
   throw new Error('Please configure the database environment variables first!')
