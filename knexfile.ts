@@ -12,7 +12,7 @@ if (
 }
 
 export = {
-  client: 'mysql',
+  client: 'pg',
   connection: {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
