@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@types/faker": "^4.1.11",
-    "apollo-server": "^2.14.2",
+    "apollo-server": "^2.25.3",
     "dotenv": "^8.2.0",
     "faker": "^4.1.0",
     "graphql": "^14.0.0",
