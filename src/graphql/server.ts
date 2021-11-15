@@ -19,8 +19,10 @@ const baseTypeDefs = gql`
 const definitions = [user, post, comment]
 
 export default new ApolloServer({
-  typeDefs: [baseTypeDefs, ...definitions.map(d => d.typeDefs)],
-  resolvers: definitions.map(d => d.resolvers),
+  introspection: true,
+  playground: true,
+  typeDefs: [baseTypeDefs, ...definitions.map((d) => d.typeDefs)],
+  resolvers: definitions.map((d) => d.resolvers),
   context: (): Context => ({
     knex,
   }),
