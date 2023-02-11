@@ -34,7 +34,7 @@
     "@graphql-codegen/typescript": "^1.13.2",
     "@graphql-codegen/typescript-resolvers": "^1.13.2",
     "husky": "^4.2.5",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.20",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1"
   }
